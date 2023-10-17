@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-17T19:39:20 BST" name="Default suite" finished-at="2023-10-17T19:39:46 BST" duration-ms="25011">
+    <groups>
+    </groups>
+    <test started-at="2023-10-17T19:39:20 BST" name="Default test" finished-at="2023-10-17T19:39:46 BST" duration-ms="25011">
+      <class name="testCases.CaResetPasswordTest">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:21 BST" name="beforetest" finished-at="2023-10-17T19:39:28 BST" duration-ms="7827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetest -->
+        <test-method signature="restPasswordCorrectDetail()[pri:1, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:28 BST" name="restPasswordCorrectDetail" finished-at="2023-10-17T19:39:35 BST" duration-ms="6140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restPasswordCorrectDetail -->
+        <test-method signature="resetPasswordEmptyField()[pri:2, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:35 BST" name="resetPasswordEmptyField" finished-at="2023-10-17T19:39:37 BST" duration-ms="2318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPasswordEmptyField -->
+        <test-method signature="resetPasswordInvalid()[pri:3, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:37 BST" name="resetPasswordInvalid" finished-at="2023-10-17T19:39:41 BST" duration-ms="4272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPasswordInvalid -->
+        <test-method signature="resetPasswordCancelLink()[pri:4, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:41 BST" name="resetPasswordCancelLink" finished-at="2023-10-17T19:39:44 BST" duration-ms="2986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPasswordCancelLink -->
+        <test-method signature="resetPassInvalidEmailFor()[pri:5, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:44 BST" name="resetPassInvalidEmailFor" finished-at="2023-10-17T19:39:45 BST" duration-ms="1102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPassInvalidEmailFor -->
+      </class> <!-- testCases.CaResetPasswordTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
