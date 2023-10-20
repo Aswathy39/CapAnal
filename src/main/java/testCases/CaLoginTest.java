@@ -25,6 +25,7 @@ public WebDriver driver;
 		CaLoginPage acfm =new CaLoginPage(driver);
 		acfm.navigateToLogin();
 		acfm.LoginForm();
+		acfm.logout();
 	}
 	@Test(priority=2)
 	public void InvalidloginInfo() throws Exception

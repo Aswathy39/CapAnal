@@ -58,7 +58,7 @@ public class CaAddAccountPage
 		//last name
 		driver.findElement(lastname).sendKeys("Emerson");
 		//emailid
-		driver.findElement(emaild).sendKeys("test16@ascensor.com");
+		driver.findElement(emaild).sendKeys("test300@ascensor.com");
 		//password
 		driver.findElement(password).sendKeys("GREGORY12");
 		//create button
@@ -121,7 +121,18 @@ public class CaAddAccountPage
 		driver.findElement(createAcc).click();
 		//create button
 		driver.findElement(createbutton).click();
-
+	}
+	public void createAccMandatoryFields() throws InterruptedException
+	{
+		driver.navigate().refresh();
+		driver.findElement(accounticon).click();
+		Thread.sleep(2000);
+		driver.findElement(createAcc).click();
+		driver.findElement(emaild).sendKeys("test200@ascensor.com");
+		//password
+		driver.findElement(password).sendKeys("Herdyui");
+		//create button
+		driver.findElement(createbutton).click();
 	}
 
 

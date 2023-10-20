@@ -5,12 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Allure;
-
 public class CaLoginPage
 {
 	public WebDriver driver;
 	SoftAssert softAssert =new SoftAssert();
-	
 
 	public  CaLoginPage(WebDriver driver)
 	{
@@ -23,7 +21,7 @@ public class CaLoginPage
 	By signinbuton=By.xpath("//*[@id=\"customer_login\"]/button"); 
 	By logout=By.xpath("//*[@id=\"shopify-section-template--16897772126422__main\"]/div/div[1]/a");
 	By invalidMsg = By.xpath("//*[@id=\"customer_login\"]/div[1]/ul/li");
-	
+	By adrsVer = By.xpath("/html/body/main/div/div/div/div/h2");
 	
 	public void navigateToLogin()
 	{
@@ -50,9 +48,14 @@ public class CaLoginPage
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
 	softAssert.assertAll();
 	
-	//logout  
-	driver.findElement(logout).click();
-	Allure.step("Clicked the Log out"); 
+	 
+	}
+	public void logout()
+	{
+		//logout  
+		driver.findElement(logout).click();
+		Allure.step("Clicked the Log out");
+		
 	}
 
 	
@@ -163,6 +166,7 @@ public class CaLoginPage
   public void loginAndBack() throws Exception
   {
 	  LoginForm();
+	  logout();
 	  driver.navigate(). back();
 	  
 	  Thread.sleep(1000);

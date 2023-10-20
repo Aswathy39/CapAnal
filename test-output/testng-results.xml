@@ -1,37 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-17T19:39:20 BST" name="Default suite" finished-at="2023-10-17T19:39:46 BST" duration-ms="25011">
+  <suite started-at="2023-10-19T19:26:40 BST" name="Default suite" finished-at="2023-10-19T19:27:18 BST" duration-ms="37285">
     <groups>
     </groups>
-    <test started-at="2023-10-17T19:39:20 BST" name="Default test" finished-at="2023-10-17T19:39:46 BST" duration-ms="25011">
-      <class name="testCases.CaResetPasswordTest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:21 BST" name="beforetest" finished-at="2023-10-17T19:39:28 BST" duration-ms="7827" status="PASS">
+    <test started-at="2023-10-19T19:26:40 BST" name="Default test" finished-at="2023-10-19T19:27:18 BST" duration-ms="37285">
+      <class name="testCases.CaAddressTest">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:26:40 BST" name="beforetest" finished-at="2023-10-19T19:26:46 BST" duration-ms="5972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="restPasswordCorrectDetail()[pri:1, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:28 BST" name="restPasswordCorrectDetail" finished-at="2023-10-17T19:39:35 BST" duration-ms="6140" status="PASS">
+        <test-method signature="Login()[pri:1, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:26:46 BST" name="Login" finished-at="2023-10-19T19:26:51 BST" duration-ms="4820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- restPasswordCorrectDetail -->
-        <test-method signature="resetPasswordEmptyField()[pri:2, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:35 BST" name="resetPasswordEmptyField" finished-at="2023-10-17T19:39:37 BST" duration-ms="2318" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method signature="AddressPage()[pri:2, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:26:51 BST" name="AddressPage" finished-at="2023-10-19T19:26:57 BST" duration-ms="5799" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resetPasswordEmptyField -->
-        <test-method signature="resetPasswordInvalid()[pri:3, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:37 BST" name="resetPasswordInvalid" finished-at="2023-10-17T19:39:41 BST" duration-ms="4272" status="PASS">
+        </test-method> <!-- AddressPage -->
+        <test-method signature="AddEmptyAddress()[pri:3, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:26:57 BST" name="AddEmptyAddress" finished-at="2023-10-19T19:27:02 BST" duration-ms="4344" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resetPasswordInvalid -->
-        <test-method signature="resetPasswordCancelLink()[pri:4, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:41 BST" name="resetPasswordCancelLink" finished-at="2023-10-17T19:39:44 BST" duration-ms="2986" status="PASS">
+        </test-method> <!-- AddEmptyAddress -->
+        <test-method signature="CancelButton()[pri:4, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:27:02 BST" name="CancelButton" finished-at="2023-10-19T19:27:07 BST" duration-ms="5751" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Message Mismatch expected [] but found [Add a new address]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Message Mismatch expected [] but found [Add a new address]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at pages.CaAddressPage.clickCancelBtn(CaAddressPage.java:137)
+at testCases.CaAddressTest.CancelButton(CaAddressTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resetPasswordCancelLink -->
-        <test-method signature="resetPassInvalidEmailFor()[pri:5, instance:testCases.CaResetPasswordTest@258ee7de]" started-at="2023-10-17T19:39:44 BST" name="resetPassInvalidEmailFor" finished-at="2023-10-17T19:39:45 BST" duration-ms="1102" status="PASS">
+        </test-method> <!-- CancelButton -->
+        <test-method signature="EditAddress()[pri:5, instance:testCases.CaAddressTest@4930539b]" started-at="2023-10-19T19:27:07 BST" name="EditAddress" finished-at="2023-10-19T19:27:18 BST" duration-ms="10307" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resetPassInvalidEmailFor -->
-      </class> <!-- testCases.CaResetPasswordTest -->
+        </test-method> <!-- EditAddress -->
+      </class> <!-- testCases.CaAddressTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
