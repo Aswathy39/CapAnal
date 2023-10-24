@@ -55,5 +55,11 @@ public WebDriver driver;
 		acfm.editAddress();
 		
 	}
+	@Test(priority=6)
+	public void DeleteAddress() throws Exception
+	{
+		CaAddressPage acfm =new CaAddressPage(driver);
+		acfm.deleteAddress();
+	}
 
 }

@@ -21,32 +21,34 @@ public class CaAddressPage
 	By ViewAddressLink = By.xpath("//*[@id=\"shopify-section-template--16897772126422__main\"]/div/div[2]/div[2]/a");
 	By addAddressBtn = By.xpath("//*[@id=\"shopify-section-template--16897772290262__main\"]/div/div/button");
 	By firstName =By.id("AddressFirstNameNew");
-	By firstNameEdit = By.id("AddressFirstName_8351873990870");
+	By firstNameEdit = By.xpath("//li[2]/div/form/div/input");
 	By lastName = By.id("AddressLastNameNew");
-	By lastNameEdit = By.id("AddressLastName_8351873990870");
+	By lastNameEdit = By.xpath("//li[2]/div/form/div[2]/input");
 	By companyName = By.id("AddressCompanyNew");
-	By companyNameEdit = By.id("AddressCompany_8351873990870");
+	By companyNameEdit = By.xpath("//li[2]/div/form/div[3]/input");
 	By addressOne = By.id("AddressAddress1New");
-	By addressOneEdit = By.id("AddressAddress1_8351873990870");
+	By addressOneEdit = By.xpath("//li[2]/div/form/div[4]/input");
 	By addressTwo = By.id("AddressAddress2New");
-	By addressTwoEdit = By.id("AddressAddress2_8351873990870");
+	By addressTwoEdit = By.xpath("//li[2]/div/form/div[5]/input");
 	By city =By.id("AddressCityNew");
-	By cityEdit=By.id("AddressCity_8351873990870");
+	By cityEdit=By.xpath("//li[2]/div/form/div[6]/input");
 	By adrsCountry = By.id("AddressCountryNew");
-	By countryDropEdit = By.id("AddressCountry_8351873990870");
+	By countryDropEdit = By.xpath("//li[2]/div/form/div[7]/div/select");
 	By country =By.xpath("//option[. = 'United Kingdom']");
-	By country2 = By.xpath("//*[@id=\"AddressCountry_8351873990870\"]/option[227]");
+	By country2 = By.xpath("/html/body/main/div/div/ul/li[2]/div/form/div[7]/div/select/option[15]");
 	By postalCode=By.id("AddressZipNew");
-	By postalCodeEdit=By.id("AddressZip_8351873990870");
+	By postalCodeEdit=By.xpath("//li[2]/div/form/div[9]/input");
 	By phone =By.id("AddressPhoneNew");
-	By phoneEdit =By.id("AddressPhone_8351873990870");
+	By phoneEdit =By.xpath("//li[2]/div/form/div[10]/input");
 	By submit = By.xpath("//*[@id=\"address_form_new\"]/div[12]/button[1]");
 	By address =By.xpath("/html/body/main/div/div/div/button");
 	By verifyAddrs = By.xpath("//li[2]/p");
 	By cancelBtn = By.xpath("//*[@id=\"address_form_new\"]/div[12]/button[2]");
 	By adrsVer =By.xpath("/html/body/main/div/div/div/div/h2");
-	By edit = By.xpath("//*[@id=\"EditFormButton_8351873990870\"]");
-	By updateBtn = By.xpath("//*[@id=\"address_form_8351873990870\"]/div[12]/button[1]");
+	By edit = By.xpath("//li[2]/button");
+	By updateBtn = By.xpath("/html/body/main/div/div/ul/li[2]/div/form/div[12]/button[1]");
+	By deletebtn = By.xpath("//*[@id=\"shopify-section-template--16897772290262__main\"]/div/ul/li[2]/button[2]");
+	By verifyAddrsDeleted = By.linkText("Daviz Gregori");
 	
 	public void navigateToAddressPage()
 	{
@@ -109,10 +111,6 @@ public class CaAddressPage
 		Allure.step("Clicked on add address button");
 		driver.findElement(submit).click();
 		
-//		String actadrs = "David Gregory\\nDavid & G test company Limited\\n20 mariantia flat\\nnear round road church\\nMnchester M23 54D6\\nUnited Kingdom";
-//		String expAddrs= driver.findElement(verifyAddrs).getText();
-//		softAssert.assertEquals(actadrs, expAddrs, "Message Mismatch");
-//		softAssert.assertAll();
 		
 	}
 	public void clickCancelBtn() throws Exception
@@ -179,6 +177,21 @@ public class CaAddressPage
 		Allure.step("Entered phone number");
 		driver.findElement(updateBtn).click();
 		Allure.step("Clicked on submit");
+		
+	}
+	
+	public void deleteAddress() throws Exception
+	{
+		Thread.sleep(2000);
+		driver.findElement(deletebtn).click();
+		Allure.step("Address is deleted");
+		Thread.sleep(2000);
+		//shopify popup to delete address
+	    driver.switchTo().alert().dismiss();
+	    Thread.sleep(2000);
+	    driver.findElement(deletebtn).click();
+	    Thread.sleep(2000);
+	    driver.switchTo().alert().accept();
 		
 	}
 

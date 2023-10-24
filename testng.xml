@@ -5,6 +5,8 @@
     <classes>
       <class name="testCases.CaAddAccountTest"/>
       <class name="testCases.CaLoginTest"/>
+      <class name="testCases.CaAddressTest"/>
+       <class name="testCases.CaResetPasswordTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
