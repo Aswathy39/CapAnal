@@ -3,6 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testCases.CaResetPasswordTest">
+        <methods>
+          <include name="restPasswordCorrectDetail"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- testCases.CaResetPasswordTest -->
       <class name="testCases.CaAddressTest">
         <methods>
           <include name="beforetest"/>

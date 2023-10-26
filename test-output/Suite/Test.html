@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>20/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>28/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 20 11:52:45 BST 2023</td>
+<td>Started on:</td><td>Thu Oct 26 17:44:17 BST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>214 seconds (214332 ms)</td>
+<tr><td>Total time:</td><td>208 seconds (208413 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,15 +78,15 @@ function toggleAllBoxes() {
 <td title='testCases.CaAddressTest.CancelButton()'><b>CancelButton</b><br>Test class: testCases.CaAddressTest</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	Message Mismatch expected [] but found [Add a new address]
-	at pages.CaAddressPage.clickCancelBtn(CaAddressPage.java:137)
+	at pages.CaAddressPage.clickCancelBtn(CaAddressPage.java:135)
 	at testCases.CaAddressTest.CancelButton(CaAddressTest.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1949363603", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1949363603'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1530020935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1530020935'><pre>java.lang.AssertionError: The following asserts failed:
 	Message Mismatch expected [] but found [Add a new address]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at pages.CaAddressPage.clickCancelBtn(CaAddressPage.java:137)
+	at pages.CaAddressPage.clickCancelBtn(CaAddressPage.java:135)
 	at testCases.CaAddressTest.CancelButton(CaAddressTest.java:48)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -118,17 +118,17 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>5</td>
-<td>testCases.CaAddressTest@540dbda9</td></tr>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.loginAndBackTest()'><b>loginAndBackTest</b><br>Test class: testCases.CaLoginTest</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
-	URL Mismatch expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account?analytics_trace_id=c62018d8-5041-4e41-91d8-99dcfeb15143]
+	URL Mismatch expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account?analytics_trace_id=74371087-e5bf-4c35-a7ca-5f5351b67afc]
 	at pages.CaLoginPage.loginAndBack(CaLoginPage.java:176)
 	at testCases.CaLoginTest.loginAndBackTest(CaLoginTest.java:74)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace256719132", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace256719132'><pre>java.lang.AssertionError: The following asserts failed:
-	URL Mismatch expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account?analytics_trace_id=c62018d8-5041-4e41-91d8-99dcfeb15143]
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1525953166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1525953166'><pre>java.lang.AssertionError: The following asserts failed:
+	URL Mismatch expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account?analytics_trace_id=74371087-e5bf-4c35-a7ca-5f5351b67afc]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
 	at pages.CaLoginPage.loginAndBack(CaLoginPage.java:176)
@@ -163,7 +163,52 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>6</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
+<tr>
+<td title='testCases.CaResetPasswordTest.restPasswordCorrectDetail()'><b>restPasswordCorrectDetail</b><br>Test class: testCases.CaResetPasswordTest</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	URL Mismatched expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account/login#recover]
+	at pages.CaResetPasswordPage.resetpassword(CaResetPasswordPage.java:59)
+	at testCases.CaResetPasswordTest.restPasswordCorrectDetail(CaResetPasswordTest.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1067780644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1067780644'><pre>java.lang.AssertionError: The following asserts failed:
+	URL Mismatched expected [https://capital-analytical.myshopify.com/account/login] but found [https://capital-analytical.myshopify.com/account/login#recover]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at pages.CaResetPasswordPage.resetpassword(CaResetPasswordPage.java:59)
+	at testCases.CaResetPasswordTest.restPasswordCorrectDetail(CaResetPasswordTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>testCases.CaResetPasswordTest@42f9c19a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -176,102 +221,142 @@ function toggleAllBoxes() {
 <td title='testCases.CaAddressTest.AddEmptyAddress()'><b>AddEmptyAddress</b><br>Test class: testCases.CaAddressTest</td>
 <td></td>
 <td>4</td>
-<td>testCases.CaAddressTest@540dbda9</td></tr>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
 <tr>
 <td title='testCases.CaAddressTest.AddressPage()'><b>AddressPage</b><br>Test class: testCases.CaAddressTest</td>
 <td></td>
-<td>5</td>
-<td>testCases.CaAddressTest@540dbda9</td></tr>
+<td>6</td>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
+<tr>
+<td title='testCases.CaAddressTest.DeleteAddress()'><b>DeleteAddress</b><br>Test class: testCases.CaAddressTest</td>
+<td></td>
+<td>8</td>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
 <tr>
 <td title='testCases.CaAddressTest.EditAddress()'><b>EditAddress</b><br>Test class: testCases.CaAddressTest</td>
 <td></td>
-<td>8</td>
-<td>testCases.CaAddressTest@540dbda9</td></tr>
+<td>10</td>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.FindProductFromDropdown()'><b>FindProductFromDropdown</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>3</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.InactiveUsernameAndPassowrd()'><b>InactiveUsernameAndPassowrd</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
-<td>4</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>5</td>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.InvalidloginInfo()'><b>InvalidloginInfo</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
-<td>4</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>5</td>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.Invaliduservalidpass()'><b>Invaliduservalidpass</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
 <td>4</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
 <tr>
 <td title='testCases.CaAddressTest.Login()'><b>Login</b><br>Test class: testCases.CaAddressTest</td>
 <td></td>
 <td>5</td>
-<td>testCases.CaAddressTest@540dbda9</td></tr>
+<td>testCases.CaAddressTest@27b000f7</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.Login()'><b>Login</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>5</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.LoginFormValid()'><b>LoginFormValid</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
-<td>9</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>6</td>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.SearchProduct()'><b>SearchProduct</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>6</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.SearchProductWithInvalidName()'><b>SearchProductWithInvalidName</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>6</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.SearchProductWithPartialName()'><b>SearchProductWithPartialName</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>5</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.ValiduserInvalidpass()'><b>ValiduserInvalidpass</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
 <td>4</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.VerifyProductListedFromDropdown()'><b>VerifyProductListedFromDropdown</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>2</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.VerifyProductSearchWithInvalidName()'><b>VerifyProductSearchWithInvalidName</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>2</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
+<tr>
+<td title='testCases.CaSearchProductTest.VerifySearchedProduct()'><b>VerifySearchedProduct</b><br>Test class: testCases.CaSearchProductTest</td>
+<td></td>
+<td>2</td>
+<td>testCases.CaSearchProductTest@64bfd6fd</td></tr>
 <tr>
 <td title='testCases.CaAddAccountTest.createAccEmpty()'><b>createAccEmpty</b><br>Test class: testCases.CaAddAccountTest</td>
 <td></td>
-<td>9</td>
-<td>testCases.CaAddAccountTest@f72203</td></tr>
+<td>8</td>
+<td>testCases.CaAddAccountTest@545e57d7</td></tr>
 <tr>
 <td title='testCases.CaAddAccountTest.createAccExistEmail()'><b>createAccExistEmail</b><br>Test class: testCases.CaAddAccountTest</td>
 <td></td>
 <td>22</td>
-<td>testCases.CaAddAccountTest@f72203</td></tr>
+<td>testCases.CaAddAccountTest@545e57d7</td></tr>
 <tr>
 <td title='testCases.CaAddAccountTest.createAccInvalid()'><b>createAccInvalid</b><br>Test class: testCases.CaAddAccountTest</td>
 <td></td>
-<td>9</td>
-<td>testCases.CaAddAccountTest@f72203</td></tr>
+<td>8</td>
+<td>testCases.CaAddAccountTest@545e57d7</td></tr>
 <tr>
 <td title='testCases.CaAddAccountTest.createAccMandatoryFields()'><b>createAccMandatoryFields</b><br>Test class: testCases.CaAddAccountTest</td>
 <td></td>
-<td>11</td>
-<td>testCases.CaAddAccountTest@f72203</td></tr>
+<td>9</td>
+<td>testCases.CaAddAccountTest@545e57d7</td></tr>
 <tr>
 <td title='testCases.CaAddAccountTest.createAccount()'><b>createAccount</b><br>Test class: testCases.CaAddAccountTest</td>
 <td></td>
-<td>10</td>
-<td>testCases.CaAddAccountTest@f72203</td></tr>
+<td>8</td>
+<td>testCases.CaAddAccountTest@545e57d7</td></tr>
 <tr>
 <td title='testCases.CaLoginTest.emptylogin()'><b>emptylogin</b><br>Test class: testCases.CaLoginTest</td>
 <td></td>
 <td>3</td>
-<td>testCases.CaLoginTest@377008df</td></tr>
+<td>testCases.CaLoginTest@2bc9a775</td></tr>
 <tr>
 <td title='testCases.CaResetPasswordTest.resetPassInvalidEmailFor()'><b>resetPassInvalidEmailFor</b><br>Test class: testCases.CaResetPasswordTest</td>
 <td></td>
-<td>1</td>
-<td>testCases.CaResetPasswordTest@22bb5646</td></tr>
+<td>0</td>
+<td>testCases.CaResetPasswordTest@42f9c19a</td></tr>
 <tr>
 <td title='testCases.CaResetPasswordTest.resetPasswordCancelLink()'><b>resetPasswordCancelLink</b><br>Test class: testCases.CaResetPasswordTest</td>
 <td></td>
-<td>4</td>
-<td>testCases.CaResetPasswordTest@22bb5646</td></tr>
+<td>3</td>
+<td>testCases.CaResetPasswordTest@42f9c19a</td></tr>
 <tr>
 <td title='testCases.CaResetPasswordTest.resetPasswordEmptyField()'><b>resetPasswordEmptyField</b><br>Test class: testCases.CaResetPasswordTest</td>
 <td></td>
-<td>3</td>
-<td>testCases.CaResetPasswordTest@22bb5646</td></tr>
+<td>2</td>
+<td>testCases.CaResetPasswordTest@42f9c19a</td></tr>
 <tr>
 <td title='testCases.CaResetPasswordTest.resetPasswordInvalid()'><b>resetPasswordInvalid</b><br>Test class: testCases.CaResetPasswordTest</td>
 <td></td>
-<td>5</td>
-<td>testCases.CaResetPasswordTest@22bb5646</td></tr>
-<tr>
-<td title='testCases.CaResetPasswordTest.restPasswordCorrectDetail()'><b>restPasswordCorrectDetail</b><br>Test class: testCases.CaResetPasswordTest</td>
-<td></td>
-<td>8</td>
-<td>testCases.CaResetPasswordTest@22bb5646</td></tr>
+<td>3</td>
+<td>testCases.CaResetPasswordTest@42f9c19a</td></tr>
 </table><p>
 </body>
 </html>

@@ -7,6 +7,8 @@
       <class name="testCases.CaLoginTest"/>
       <class name="testCases.CaAddressTest"/>
        <class name="testCases.CaResetPasswordTest"/>
+        <class name="testCases.CaSearchProductTest"/>
+         <class name="testCases.CaAddToCartTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
