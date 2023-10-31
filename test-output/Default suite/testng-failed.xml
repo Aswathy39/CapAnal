@@ -6,7 +6,7 @@
       <class name="testCases.CaAddToCartTest">
         <methods>
           <include name="beforetest"/>
-          <include name="AddToCart"/>
+          <include name="emptyCart"/>
         </methods>
       </class> <!-- testCases.CaAddToCartTest -->
     </classes>

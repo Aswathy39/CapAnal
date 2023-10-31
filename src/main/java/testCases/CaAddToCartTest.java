@@ -64,6 +64,17 @@ public WebDriver driver;
 		acfm.cartViewHeader();
 		acfm.productQuantityInputArea();
 	}
+	@Test(priority=7)
+	public void emptyCart() throws Exception
+	{
+		CaAddToCartPage acfm =new CaAddToCartPage(driver);
+		acfm.emptyCart();
+	}
 	
-
+	@Test(priority=8)
+	public void ProductQuantityVerification() throws Exception
+	{
+		CaAddToCartPage acfm =new CaAddToCartPage(driver);
+		acfm.productQuantityVerification();
+	}
 }
