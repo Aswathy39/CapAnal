@@ -33,6 +33,13 @@ public class CaProductPriceTotalVerifyTest
 		acfm.addQuantity();
 		acfm.totalAmountCalculation();
 	}
+	@Test(priority=2)
+	public void ContinueShopFromCart() throws Exception
+	{
+		CaProductPriceTotalVerifyPage acfm =new CaProductPriceTotalVerifyPage(driver);
+		acfm.navigateToCartPage();
+		acfm.continueShoppingFromCart();
+	}
 	
 
 }

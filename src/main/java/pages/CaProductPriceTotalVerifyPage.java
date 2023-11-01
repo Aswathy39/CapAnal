@@ -25,6 +25,7 @@ public class CaProductPriceTotalVerifyPage
 	By cartHeading = By.xpath("/html/body/main/div[1]/cart-items/div[1]/h1");
 	By singleProdPrice = By.xpath("/html/body/main/div[1]/cart-items/form/div/div/table/tbody/tr/td[2]/div");
 	By prodQtyInput3 = By.xpath("/html/body/main/div[1]/cart-items/form/div/div/table/tbody/tr/td[4]/div[1]/quantity-input/input");
+	By continueShop = By.xpath("//a[@href='/collections/all']");
 	
 	public void navigateToCartPage() throws Exception
 	{
@@ -55,18 +56,36 @@ public class CaProductPriceTotalVerifyPage
 	public void totalAmountCalculation()
 	{
 		String SingleProdPriceVal1 =driver.findElement(singleProdPrice).getText();
+		//to trim the currency symbol
+		SingleProdPriceVal1 = SingleProdPriceVal1.replace("£","");
+		//convert string to float value
 		float SingleProdPriceValue = Float.parseFloat(SingleProdPriceVal1);
-		
+		//to get 'quantity' from the field. And assigned as string value.
 		String prodQty = driver.findElement(prodQtyInput3).getAttribute("value");
+		//converted string to float
 		float prodQtyValue = Float.parseFloat(prodQty);
+		
 		float totalPriceVal=prodQtyValue * SingleProdPriceValue;
 		System.out.println("Total price :"+totalPriceVal);
-		
-		String expProdTotal = "";
-		String actProdTotal = "";
+		//the total value received from line 67 is again converted to string to verify
+		String totalPriceValue2 =Float.toString(totalPriceVal);
+	
+		String expProdTotal = totalPriceValue2;
+		String actProdTotal = driver.findElement(singleProdPrice).getText();
 		softAssert.assertEquals(actProdTotal, expProdTotal, "Product price mistmatch");
 		Allure.step("Verified product price total");
+	}
+	
+	public void continueShoppingFromCart() throws Exception
+	{
+		Thread.sleep(2000);
+		driver.findElement(continueShop).click();
+		Allure.step("Clicked on continue shopping link from cart");
 		
+		String expURL = "https://capital-analytical.myshopify.com/collections/all";
+		String actURL = driver.getCurrentUrl();
+		softAssert.assertEquals(actURL, expURL, "URL mistmatch");
+		Allure.step("Verified continue shopping url");
 		
 	}
 

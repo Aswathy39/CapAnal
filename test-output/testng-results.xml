@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-28T17:52:41 BST" name="Default suite" finished-at="2023-10-28T17:53:12 BST" duration-ms="31421">
+  <suite started-at="2023-10-31T18:18:06 GMT" name="Default suite" finished-at="2023-10-31T18:18:58 GMT" duration-ms="52182">
     <groups>
     </groups>
-    <test started-at="2023-10-28T17:52:41 BST" name="Default test" finished-at="2023-10-28T17:53:12 BST" duration-ms="31421">
+    <test started-at="2023-10-31T18:18:06 GMT" name="Default test" finished-at="2023-10-31T18:18:58 GMT" duration-ms="52182">
       <class name="testCases.CaProductPriceTotalVerifyTest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.CaProductPriceTotalVerifyTest@258ee7de]" started-at="2023-10-28T17:52:41 BST" name="beforetest" finished-at="2023-10-28T17:52:49 BST" duration-ms="8497" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.CaProductPriceTotalVerifyTest@7cab1508]" started-at="2023-10-31T18:18:06 GMT" name="beforetest" finished-at="2023-10-31T18:18:11 GMT" duration-ms="5929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="Login()[pri:1, instance:testCases.CaProductPriceTotalVerifyTest@258ee7de]" started-at="2023-10-28T17:52:49 BST" name="Login" finished-at="2023-10-28T17:52:55 BST" duration-ms="6147" status="PASS">
+        <test-method signature="Login()[pri:1, instance:testCases.CaProductPriceTotalVerifyTest@7cab1508]" started-at="2023-10-31T18:18:12 GMT" name="Login" finished-at="2023-10-31T18:18:17 GMT" duration-ms="5087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ProductTotalPriceVerification()[pri:1, instance:testCases.CaProductPriceTotalVerifyTest@258ee7de]" started-at="2023-10-28T17:52:56 BST" name="ProductTotalPriceVerification" finished-at="2023-10-28T17:53:12 BST" duration-ms="16397" status="PASS">
+        <test-method signature="ProductTotalPriceVerification()[pri:1, instance:testCases.CaProductPriceTotalVerifyTest@7cab1508]" started-at="2023-10-31T18:18:17 GMT" name="ProductTotalPriceVerification" finished-at="2023-10-31T18:18:39 GMT" duration-ms="21930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductTotalPriceVerification -->
+        <test-method signature="ContinueShopFromCart()[pri:2, instance:testCases.CaProductPriceTotalVerifyTest@7cab1508]" started-at="2023-10-31T18:18:39 GMT" name="ContinueShopFromCart" finished-at="2023-10-31T18:18:58 GMT" duration-ms="18955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ContinueShopFromCart -->
       </class> <!-- testCases.CaProductPriceTotalVerifyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
