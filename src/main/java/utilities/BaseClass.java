@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class BaseClass { 
@@ -14,6 +15,7 @@ public class BaseClass {
 
 //		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+//		driver = new FirefoxDriver();
 		
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
