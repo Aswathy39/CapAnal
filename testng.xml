@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="smoke testing">
+  
+<test thread-count="5" name="Test1">
+	  <parameter name="browser" value="chrome"></parameter>
     <classes>
+     
       <class name="testCases.CaAddAccountTest"/>
-      <class name="testCases.CaLoginTest"/>
-      <class name="testCases.CaAddressTest"/>
-       <class name="testCases.CaResetPasswordTest"/>
-        <class name="testCases.CaSearchProductTest"/>
-         <class name="testCases.CaAddToCartTest"/>
+       <class name ="testCases.CaLoginTest"/>
+       <class name ="testCases.CaResetPasswordTest"/>
+       
+       <class name ="testCases.CaAddressTest"/>
+       <class name ="testCases.CaSearchProductTest"/>
+       <class name ="testCases.CaAccessEmptyCartTest"/>
+       
+       <class name ="testCases.CaCheckoutAddressAddEditDeleTest"/>
+       <class name ="testCases.CaContactUsTest"/>
+       <class name ="testCases.CaSoldOutProductTest"/>
+       <class name ="testCases.CaCheckoutPageLoginTest"/>
+       <class name ="testCases.CaPaymentModeTest"/>
     </classes>
   </test> <!-- Test -->
+  <!--<test thread-count="5" name="Test2">
+	  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+     
+      <class name ="testCases.CaContactUsTest"/>
+
+     
+    </classes>
+  </test> --><!-- Test -->
+  <!--<test thread-count="5" name="Test3">
+	  <parameter name="browser" value="edge"></parameter>
+    <classes>
+     
+         <class name ="testCases.CaContactUsTest"/>
+
+     
+    </classes>
+  </test> --><!-- Test -->
 </suite> <!-- Suite -->

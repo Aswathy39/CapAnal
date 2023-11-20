@@ -28,26 +28,26 @@ public class CaResetPasswordPage {
 	public void navigateToResetPassword() 
 	{ 
 	driver.findElement(accounticon).click();
-	Allure.step("Clicked on contact form button to navigate to contact form"); 
+	Allure.step("Clicked on account icon to navigate to login form to view password reset link"); 
 	driver.findElement(passwordresetlink).click(); 
-	Allure.step("Clicked on contact form button to navigate to contact form");
+	Allure.step("Clicked on password reset link");
 	
 	String actMsg ="https://capital-analytical.myshopify.com/account/login#recover";
 	String expMsg = driver.getCurrentUrl();
 	softAssert.assertEquals(expMsg, actMsg, "URL Mismatch");
 	softAssert.assertAll();
-	Allure.step("Reset password URL Verified");
+	Allure.step("Reset password page URL Verified");
 	}
 	public void resetpassword() throws InterruptedException 
 	{
 		//clicking account icon   
 		driver.findElement(accounticon).click(); 
-		Allure.step("Clicked on contact form button to navigate to contact form"); 
+		Allure.step("Clicked on account icon to navigate to login form to view password reset link"); 
 		//password reset link    
 		driver.findElement(passwordresetlink).click(); 
-		Allure.step("Clicked on contact form button to navigate to contact form"); 
+		Allure.step("Clicked on password reset link"); 
 		//email field    
-		driver.findElement(emaiild).sendKeys("test12@ascensor.com"); 
+		driver.findElement(emaiild).sendKeys("test302@ascensor.com"); 
 		Allure.step("Entered Emailid to receive an email to reset your password"); 
 		//submit button 
 		driver.findElement(submit).click(); 
@@ -57,6 +57,7 @@ public class CaResetPasswordPage {
 		String ExpnmTxt = "https://capital-analytical.myshopify.com/account/login"; 
 		softAssert.assertEquals(ActnmTxt, ExpnmTxt, "URL Mismatched"); 
 		softAssert.assertAll(); 
+		Allure.step("URL Verified");
 	}
 	public void PasswordResetFormEmpty() throws InterruptedException 
     {
@@ -67,14 +68,16 @@ public class CaResetPasswordPage {
 	String expText =driver.findElement(resetPassValidatnMsg).getText();
 	softAssert.assertEquals(ActText, expText, "Validation message mismatch");
 	softAssert.assertAll(); 
+	Allure.step("URL Verified on clicking empty form");
 	} 
 	public void PasswordResetInvalidDetail() throws InterruptedException 
 	{ 
 
 	//email field       
-	driver.findElement(emaiild).sendKeys("ytuiYRRTYF@ascensor.com"); 
+	driver.findElement(emaiild).sendKeys("ytui55Rd5YF@ascensor.com"); 
 	Allure.step("Entered Emailid to receive an email to reset your password"); 
-	//submit button    
+	//submit button 
+	Thread.sleep(2000);
 	driver.findElement(submit).click(); 
 	Allure.step("Clicked submit button"); 
 	Thread.sleep(2000);
@@ -82,6 +85,7 @@ public class CaResetPasswordPage {
 	String expText =driver.findElement(resetPassValidatnMsg).getText();
 	softAssert.assertEquals(ActText, expText, "Validation message mismatch");
 	softAssert.assertAll(); 
+	Allure.step("URL Verified on entering invalid details");
 	} 
 	public void PasswordResetCancelLink() throws InterruptedException 
 	{ 
@@ -92,11 +96,12 @@ public class CaResetPasswordPage {
 	String ExpnmTxt = "https://capital-analytical.myshopify.com/account/login#login"; 
 	softAssert.assertEquals(ActnmTxt, ExpnmTxt, "URL Mismatched");
 	softAssert.assertAll();
+	Allure.step("URL Verified on clicking cancel link");
 	} 
 	public void PasswResetInvalidEmailFormat() throws InterruptedException 
 	{ 		
 	//email field       
-	driver.findElement(emaiild).sendKeys("ytGui"); 
+	driver.findElement(emaiild).sendKeys("ytG8iui"); 
 	Allure.step("Entered Invalid Email format"); 
 	//submit button    
 	driver.findElement(submit).click(); 
@@ -105,6 +110,7 @@ public class CaResetPasswordPage {
 	String ExpnmTxt = "https://capital-analytical.myshopify.com/account/login#recover"; 
 	softAssert.assertEquals(ActnmTxt, ExpnmTxt, "URL Mismatched");
 	softAssert.assertAll();
+	Allure.step("URL Verified on entering invalid email format");
 	} 
 	
 }

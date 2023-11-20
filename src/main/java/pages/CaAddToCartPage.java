@@ -21,7 +21,9 @@ public class CaAddToCartPage
 	By collectionName2 = By.xpath("/html/body/main/div/div/ul/li[1]/div/div/div[2]/div/h3/a");
 	By firstProduct = By.xpath("/html/body/main/div[2]/div/div/div/div/ul/li[1]/div/div/div[2]/div[1]/h3/a");
 	By addToCartBtn = By.xpath("/html/body/main/section[1]/section/div/div[2]/product-info/div[5]/product-form/form/div/button");
-	By homeIcon = By.xpath("/html/body/div[3]/sticky-header/header/a/div/img");	
+	//By homeIcon = By.xpath("/html/body/div[5]/sticky-header/header/a/div/img");	
+	//img[@class="header__heading-logo motion-reduce"]
+	By homeIcon = By.xpath("//img[@class='header__heading-logo motion-reduce']");
 	By addToCartIcon = By.xpath("/html/body/div[3]/sticky-header/header/div/a[2]/div");
 	By addToCartIcon2 = By.xpath("/html/body/div[3]/cart-notification/div/div/div[3]/a");
 	By prodQtyIncrBtn = By.xpath("/html/body/main/div[1]/cart-items/form/div/div/table/tbody/tr/td[4]/div[1]/quantity-input/button[2]");
@@ -30,7 +32,9 @@ public class CaAddToCartPage
 	By prodQtyInput3 = By.xpath("/html/body/main/div[1]/cart-items/form/div/div/table/tbody/tr/td[4]/div[1]/quantity-input/input");
 	By prodQtyDecrBtn = By.xpath("/html/body/main/div[1]/cart-items/form/div/div/table/tbody/tr/td[4]/div[1]/quantity-input/button[1]");
 	By viewCartBtn = By.id("cart-notification-button");
+	By collection3 = By.xpath("/html/body/main/div/div/ul/li[5]/div/div/div[2]/div/h3/a");
 	By cartHeading = By.xpath("/html/body/main/div[1]/cart-items/div[1]/h1");
+	By yourCartHead =By.xpath("/html/body/main/div[1]/cart-items/div[1]/h1");
 	
 	
 	public void addToCart() throws Exception
@@ -41,6 +45,8 @@ public class CaAddToCartPage
 		driver.findElement(shopNowBtn).click();
 		Allure.step("Clicked on shopnow button");
 		Thread.sleep(2000);
+		JavascriptExecutor js1 = (JavascriptExecutor) driver; 
+		 js1.executeScript("window.scrollBy(0,-500)");
 		driver.findElement(collectionName1).click();
 		Allure.step("Clicked on a collection");
 		Thread.sleep(2000);
@@ -92,13 +98,16 @@ public class CaAddToCartPage
 		Thread.sleep(2000);
 		driver.findElement(shopNowBtn).click();
 		Allure.step("Clicked on shopnow button");
-		Thread.sleep(2000);
-		driver.findElement(collectionName2).click();
+		Thread.sleep(4000);
+		driver.findElement(collection3).click();
 		Allure.step("Clicked on a collection");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		//scroll up
+	     JavascriptExecutor js1 = (JavascriptExecutor) driver; 
+		 js1.executeScript("window.scrollBy(0,-300)");
 		driver.findElement(firstProduct).click();
 		Allure.step("Clicked on product name");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		js.executeScript("window.scrollBy(0,500)"); 
@@ -145,7 +154,77 @@ public class CaAddToCartPage
 		
 		
 	}
-	
+	public void decimalValueInQuantity() throws Exception
+	{
+		Thread.sleep(2000);
+		driver.findElement(prodQtyInput).clear();
+		driver.findElement(prodQtyInput).sendKeys("544.550");
+		Allure.step("Entered product quantity as decimal value in input area");
+		Thread.sleep(2000);
+		driver.findElement(yourCartHead);
+		
+		Thread.sleep(4000);
+		String actProdQty = driver.findElement(prodQtyInput).getAttribute("value");
+		String expProdQty = "5";
+		softAssert.assertEquals(actProdQty, expProdQty, "Quantity mistmatch");
+		Allure.step("Verified decimal value is not shown in product quantity");
+		
+		softAssert.assertAll();
+		
+	}
+	public void alphabeticalValueInQuantity() throws Exception
+	{
+		Thread.sleep(4000);
+		driver.findElement(prodQtyInput).clear();
+		Thread.sleep(2000);
+		driver.findElement(prodQtyInput).sendKeys("fadffaf");
+		Allure.step("Entered product quantity as alphabetical value in input area");
+		Thread.sleep(2000);
+		driver.findElement(yourCartHead);
+		
+		Thread.sleep(4000);
+		String expProdQty = "1";
+		String actProdQty = driver.findElement(prodQtyInput).getAttribute("value");
+		softAssert.assertEquals(actProdQty, expProdQty, "Quantity mistmatch");
+		Allure.step("Verified alphabetical value is not shown in product quantity");
+		
+		softAssert.assertAll();
+		
+	}
+	public void emptyValueInQuantity() throws Exception
+	{
+		Thread.sleep(4000);
+		driver.findElement(prodQtyInput).clear();
+		Allure.step("Entered product quantity as empty in input area");
+		Thread.sleep(2000);
+		driver.findElement(yourCartHead);
+		
+		Thread.sleep(4000);
+		String expProdQty = "1";
+		String actProdQty = driver.findElement(prodQtyInput).getAttribute("value");
+		softAssert.assertEquals(actProdQty, expProdQty, "Quantity mistmatch");
+		Allure.step("Verified empty value is not shown in product quantity");
+		
+		softAssert.assertAll();
+	}
+	public void negativeValueInQuantity() throws Exception
+	{
+		Thread.sleep(4000);
+		driver.findElement(prodQtyInput).clear();
+		driver.findElement(prodQtyInput).sendKeys("-888");
+		Allure.step("Entered product quantity as empty in input area");
+		Thread.sleep(2000);
+		driver.findElement(yourCartHead);
+		
+		Thread.sleep(4000);
+		String expProdQty = "1";
+		String actProdQty = driver.findElement(prodQtyInput).getAttribute("value");
+		softAssert.assertEquals(actProdQty, expProdQty, "Quantity mistmatch");
+		Allure.step("Verified negative value is not shown in product quantity");
+		
+		softAssert.assertAll();
+		
+	}
 	
 
 }

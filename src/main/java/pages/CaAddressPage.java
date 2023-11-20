@@ -132,6 +132,8 @@ public class CaAddressPage
 		String actadrs = "Add a new address";
 		String expAddrs= driver.findElement(adrsVer).getText();
 		softAssert.assertEquals(actadrs, expAddrs, "Message Mismatch");
+		Allure.step("Checking whether the 'add a new address form is closed");
+		//as the user click 'cancel' the add address form close, so the assert fails
 		softAssert.assertAll();
 		
 	}
@@ -142,6 +144,7 @@ public class CaAddressPage
 
 		Allure.step("Clicked on edit button");
 		Thread.sleep(2000);
+		//scroll down
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		js.executeScript("window.scrollBy(0,500)");
 		

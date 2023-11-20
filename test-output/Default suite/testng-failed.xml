@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.CaSoldOutProductTest">
+      <class name="testCases.CaCurrencyChangeTest">
         <methods>
-          <include name="SoldOutProduct"/>
+          <include name="close"/>
           <include name="beforetest"/>
-          <include name="Login"/>
+          <include name="VerifyProduct_checkout_page3"/>
         </methods>
-      </class> <!-- testCases.CaSoldOutProductTest -->
+      </class> <!-- testCases.CaCurrencyChangeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

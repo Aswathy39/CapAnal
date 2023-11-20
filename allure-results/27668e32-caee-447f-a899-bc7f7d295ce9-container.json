@@ -1,0 +1,1 @@
+{"uuid":"27668e32-caee-447f-a899-bc7f7d295ce9","name":"testCases.CaCurrencyChangeTest","children":["d322fa1f-8d08-4101-9c52-4944175c8bf3"],"befores":[],"afters":[{"name":"close","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1700429164736,"stop":1700429164736}],"links":[],"start":1700429156933,"stop":1700429164826}

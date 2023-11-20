@@ -30,8 +30,8 @@ public class CaLoginPage
 	}
 	public void LoginForm() throws Exception
 	{
-	driver.findElement(accounticon).click();
-	Allure.step("Clicked on contact form button to navigate to contact form");
+//	driver.findElement(accounticon).click();
+//	Allure.step("Clicked on contact form button to navigate to contact form");
 	//Email
 	driver.findElement(LoginEmail).sendKeys("sit37@ascensor.com");
 	Allure.step("Entered a new Emailid");
@@ -46,6 +46,7 @@ public class CaLoginPage
 	String actMsg ="Log out";
 	String expMsg = driver.findElement(logout).getText();
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
+	Allure.step("Verified the user can view the logout option");
 	softAssert.assertAll();
 	
 	 
@@ -61,8 +62,8 @@ public class CaLoginPage
 	
 	public void LogUseInvalidInfo() throws Exception
 { 
-	driver.findElement(accounticon).click(); 
-	Allure.step("Clicked on contact form button to navigate to contact form"); 
+//	driver.findElement(accounticon).click(); 
+	//Allure.step("Clicked on contact form button to navigate to contact form"); 
 	//Email  
 	driver.findElement(LoginEmail).sendKeys("emrson"); 
     Allure.step("Entered invalid Emailid");
@@ -78,6 +79,7 @@ public class CaLoginPage
 	String actMsg ="Incorrect email or password.";
 	String expMsg = driver.findElement(invalidMsg).getText();
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
+	Allure.step("Verified the validation message");
 	softAssert.assertAll();
 } 
 	
@@ -91,14 +93,15 @@ public class CaLoginPage
 	String actMsg ="Incorrect email or password.";
 	String expMsg = driver.findElement(invalidMsg).getText();
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
-	
+	Allure.step("Verified the validation message on submitting empty login form");
 	softAssert.assertAll();
 	}
 	
 	public void LoginValiduserInvalidpass() throws Exception
 { 
-	driver.findElement(accounticon).click();
-   Allure.step("Clicked on contact form button to navigate to contact form");
+		Thread.sleep(2000);
+//	driver.findElement(accounticon).click();
+//   Allure.step("Clicked on contact form button to navigate to contact form");
 	//Email    
   driver.findElement(LoginEmail).sendKeys("sit37@ascensor.com"); 
 	Allure.step("Entered correct Emailid"); 
@@ -115,13 +118,14 @@ public class CaLoginPage
 	String actMsg ="Incorrect email or password.";
 	String expMsg = driver.findElement(invalidMsg).getText();
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
-	
+	Allure.step("Verified the validation message shown on submitting Valid username & Invalid password ");
 	softAssert.assertAll();
 }
 	public void LoginInvaliduservalidpass() throws Exception
 	{
-	driver.findElement(accounticon).click(); 
-	Allure.step("Clicked on contact form button to navigate to contact form");
+		Thread.sleep(2000);
+//	driver.findElement(accounticon).click(); 
+//	Allure.step("Clicked on contact form button to navigate to contact form");
     //Email
     driver.findElement(LoginEmail).sendKeys("hgjh"); 
     Allure.step("Entered incorrect Emailid"); 
@@ -137,13 +141,15 @@ public class CaLoginPage
 	 String actMsg ="Incorrect email or password.";
 		String expMsg = driver.findElement(invalidMsg).getText();
 		softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
+		Allure.step("Verified the validation message shown on submitting invalid username & valid password ");
 		softAssert.assertAll();
 	 
 	 }
 	public void LoginInactiveUsernameAndPassowrd() throws Exception
        {
-	driver.findElement(accounticon).click(); 
-	Allure.step("Clicked on contact form button to navigate to contact form");
+		Thread.sleep(2000);
+//	driver.findElement(accounticon).click(); 
+//	Allure.step("Clicked on contact form button to navigate to contact form");
     //Email 
 	driver.findElement(LoginEmail).sendKeys("sit40@ascensor.com");
     Allure.step("Entered inactive Emailid");
@@ -160,7 +166,7 @@ public class CaLoginPage
 	String actMsg ="Incorrect email or password.";
 	String expMsg = driver.findElement(invalidMsg).getText();
 	softAssert.assertEquals(expMsg, actMsg, "Message Mismatch");
-	
+	Allure.step("Verified the validation message shown on submitting inactive credentials ");
 	softAssert.assertAll();
    }
   public void loginAndBack() throws Exception
@@ -173,6 +179,7 @@ public class CaLoginPage
 	  String actMsg ="https://capital-analytical.myshopify.com/account/login";
 	  String expMsg = driver.getCurrentUrl();
 	  softAssert.assertEquals(expMsg, actMsg, "URL Mismatch");
+	  Allure.step("Verified the url is matching ");
 	  softAssert.assertAll();
 		
   }
