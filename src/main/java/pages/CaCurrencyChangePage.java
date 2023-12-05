@@ -18,7 +18,6 @@ public class CaCurrencyChangePage
 	{
 		this.driver=driver; 
 	}
-	
 	By capitalHeading = By.cssSelector(".header__heading-logo");
 	By countryHeading =By.cssSelector("#HeaderCountryForm .disclosure__button > span");
 	By accounticon=By.xpath("//*[@id=\"shopify-section-sections--16897772519638__header\"]/sticky-header/header/div/a[1]");//account icon
