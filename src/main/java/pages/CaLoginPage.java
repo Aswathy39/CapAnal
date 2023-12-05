@@ -65,7 +65,7 @@ public class CaLoginPage
 //	driver.findElement(accounticon).click(); 
 	//Allure.step("Clicked on contact form button to navigate to contact form"); 
 	//Email  
-	driver.findElement(LoginEmail).sendKeys("emrson"); 
+	driver.findElement(LoginEmail).sendKeys("emrsony"); 
     Allure.step("Entered invalid Emailid");
      //Password     
 	
@@ -103,11 +103,11 @@ public class CaLoginPage
 //	driver.findElement(accounticon).click();
 //   Allure.step("Clicked on contact form button to navigate to contact form");
 	//Email    
-  driver.findElement(LoginEmail).sendKeys("sit37@ascensor.com"); 
+    driver.findElement(LoginEmail).sendKeys("sit37@ascensor.com"); 
 	Allure.step("Entered correct Emailid"); 
 	//Password       
 
-	driver.findElement(LoginPassword).sendKeys("tiuyiuyio"); 
+	driver.findElement(LoginPassword).sendKeys("tiuyi7uyio"); 
 	Allure.step("Entered incorrect Password"); 
 
 	//signin  
@@ -127,7 +127,7 @@ public class CaLoginPage
 //	driver.findElement(accounticon).click(); 
 //	Allure.step("Clicked on contact form button to navigate to contact form");
     //Email
-    driver.findElement(LoginEmail).sendKeys("hgjh"); 
+    driver.findElement(LoginEmail).sendKeys("hgjuh"); 
     Allure.step("Entered incorrect Emailid"); 
 //Password     
 	 driver.findElement(LoginPassword).sendKeys("qwerty"); 

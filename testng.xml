@@ -17,6 +17,7 @@
        <class name ="testCases.CaCheckoutAddressAddEditDeleTest"/>
        <class name ="testCases.CaContactUsTest"/>
        <class name ="testCases.CaSoldOutProductTest"/>
+       <class name ="testCases.CaCurrencyChangeTest"/>
        <class name ="testCases.CaCheckoutPageLoginTest"/>
        <class name ="testCases.CaPaymentModeTest"/>
     </classes>

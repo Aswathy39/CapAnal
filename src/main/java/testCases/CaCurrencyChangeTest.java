@@ -1,12 +1,12 @@
 package testCases;
 
 import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.CaCurrencyChangePage;
-import pages.CaLoginPage;
 import utilities.BaseClass;
 
 public class CaCurrencyChangeTest
@@ -23,10 +23,8 @@ public WebDriver driver;
 	@Test(priority=1)
 	public void VerifyCurrency1() throws Exception
 	{
-		CaLoginPage acfm =new CaLoginPage(driver);
 		CaCurrencyChangePage acfm1 =new CaCurrencyChangePage(driver);
-		acfm.navigateToLogin();
-		acfm.LoginForm();
+		acfm1.Login();
 		acfm1.countryHeading();
 		acfm1.verifyCurrencySelected();
 	}
@@ -35,7 +33,7 @@ public WebDriver driver;
 	{
 
 		CaCurrencyChangePage acfm1 =new CaCurrencyChangePage(driver);
-			acfm1.verifyCurrencyInAddtoCart();
+		acfm1.verifyCurrencyInAddtoCart();
 	}
 	@Test(priority=3)
 	public void VerifyProduct_checkout_page3()throws Exception
@@ -44,6 +42,15 @@ public WebDriver driver;
 		acfm1.verifyCurrencyInCheckout();
 		
 	}
+	@Test(priority=4)
+	public void VerifyProduct_Biiling_DeliveryAddress()throws Exception
+	{
+		CaCurrencyChangePage acfm1 =new CaCurrencyChangePage(driver);
+		acfm1.AddressVerification();
+		
+	}
+	
+	
 //	@Test(priority=4)
 //	public void payment_process_canada()throws Exception
 //	{

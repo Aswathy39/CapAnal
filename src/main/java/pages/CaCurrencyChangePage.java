@@ -21,7 +21,10 @@ public class CaCurrencyChangePage
 	
 	By capitalHeading = By.cssSelector(".header__heading-logo");
 	By countryHeading =By.cssSelector("#HeaderCountryForm .disclosure__button > span");
-		
+	By accounticon=By.xpath("//*[@id=\"shopify-section-sections--16897772519638__header\"]/sticky-header/header/div/a[1]");//account icon
+	By LoginEmail = By.xpath("//*[@id=\"CustomerEmail\"]");//login email
+	By LoginPassword=By.xpath("//*[@id=\"CustomerPassword\"]");//password
+	By signinbuton=By.xpath("//*[@id=\"customer_login\"]/button"); //signup	
 	By countryCan =By.cssSelector("#HeaderCountryList > .disclosure__item:nth-child(6) > .link");
 	By shopNowBtn = By.xpath("/html/body/main/section[1]/slideshow-component/div[2]/div[1]/div[2]/div/div[2]/a");
 	By collectionName1 =By.xpath("/html/body/main/div/div/ul/li[5]/div/div/div[2]/div/h3/a");
@@ -49,7 +52,35 @@ public class CaCurrencyChangePage
 	By accountIcon = By.xpath("(//a[@href='/account'])[2]");
 	By logout=By.xpath("//a[@href='/account/logout']");
 	By final_review_paymnt_button=By.xpath("//*[@id=\"pay-button-container\"]/div/div/button");
+	
+	By shipAdrsCheckbox = By.xpath("//*[@id=\"billingAddress\"]");
+	By shipAddrsDrop = By.cssSelector("#Select0");
+	By shipAddrs1 = By.xpath("//*[@id=\"Select13\"]/option[1]/text()");
+	By shipAddrs2 = By.xpath("//*[@id=\"Select13\"]/option[2]/text()");
 	String expCurrency1;
+	
+	
+	public void Login() throws Exception
+	{
+		
+		driver.findElement(capitalHeading).click();
+		Allure.step("Clicked on capital analytical icon");
+		driver.findElement(accounticon).click();
+		Allure.step("Clicked on contact form button to navigate to contact form");
+	    
+		//Email
+		driver.findElement(LoginEmail).sendKeys("test319@ascensor.com");
+		Allure.step("Entered a new Emailid");
+		//Password
+		driver.findElement(LoginPassword).sendKeys("GREGORY12");
+		Allure.step("Entered a new Password");
+		//signin 
+		driver.findElement(signinbuton).click();
+		Allure.step("Clicked the signin button");
+		
+		
+		
+	}	
 	
 	public void countryHeading() throws Exception
 	{
@@ -59,7 +90,7 @@ public class CaCurrencyChangePage
 	    driver.findElement(countryCan).click();
 		
 		
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		driver.findElement(searchBarIcon).click();
 		Allure.step("Clicked on search icon");
 		Thread.sleep(2000);
@@ -162,7 +193,7 @@ public class CaCurrencyChangePage
 		
 		
 		//Case will fail. Actually country is canada but on checkout page by default uk address showing and price caluclated in pounds
-		String expCurrency ="$40.00 CAD";
+		String expCurrency ="$40.00";
 		String actCurrency =driver.findElement(currencyFind3).getText();
 		
 		System.out.println("Currency " +actCurrency);
@@ -171,49 +202,29 @@ public class CaCurrencyChangePage
 		
 		softAssert.assertAll();
 	}
-	/*public void paymentArea() throws Exception
-	 {
-		 WebElement element = driver.findElement(By.cssSelector("#contact-collapsible > .\\_1ip0g651"));
-	      Actions builder = new Actions(driver);
-	      builder.moveToElement(element).perform();
-	     
-	      JavascriptExecutor js1 = (JavascriptExecutor) driver; 
-			 js1.executeScript("window.scrollBy(0,600)");
-	      Thread.sleep(2000);
-	    driver.switchTo().frame(2);
-	    driver.findElement(By.id("number")).click();
-	    Allure.step("Clicked on card number field");
-	    driver.findElement(By.id("number")).clear();
-	    Allure.step("clear if there is existing value");
-	    Thread.sleep(2000);
-	    
-       String cardNumber = "4000056655665556";
-       new Actions(driver).moveToElement(driver.findElement(By.id("number"))).sendKeys(cardNumber).build().perform();
-	    Thread.sleep(2000);
-	    Allure.step("send card number");
-	    driver.switchTo().defaultContent();
-	    driver.switchTo().frame(3);
-	   driver.findElement(By.id("expiry")).click();
-	   Allure.step("Clicked on expiry date field ");
-	   new Actions(driver).moveToElement(driver.findElement(By.id("expiry"))).sendKeys("11/23").build().perform();
-	    Allure.step("Entered expiry date");
-	   Thread.sleep(2000);
-	    driver.switchTo().defaultContent();
-	    driver.switchTo().frame(4);
-	    driver.findElement(By.id("verification_value")).click();
-	    Allure.step("Clicked on cvv field ");
-	    driver.findElement(By.id("verification_value")).sendKeys("328");
-	    driver.switchTo().defaultContent();
-	    driver.switchTo().frame(7);
-	    driver.findElement(By.id("name")).click();
-	    Allure.step("Clicked on card holder name field");
-	    driver.findElement(By.id("name")).sendKeys("thanu rahol33");
-	    Allure.step("Entered card holder name");
-	    driver.switchTo().defaultContent();
-	    driver.findElement(By.cssSelector(".\\_1fragemf4")).click();
-	    Allure.step("Clicked 'review order' on checkout page");
-	    Thread.sleep(3000);
-      driver.findElement(final_review_paymnt_button).click();
-      Allure.step("Clicked 'review order' on last checkout page");
-	 }*/
+	public void AddressVerification() throws Exception
+	{
+		//payment billing address
+		
+		driver.findElement(shipAdrsCheckbox).click();
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		driver.findElement(shipAddrsDrop).click();
+		
+		String addrs1 = driver.findElement(shipAddrsDrop).getText();
+		
+		
+		
+		if(addrs1.contains("Mckellar ON P0G 1C0, Canada")) 
+		{
+			System.out.println("adrrrss 1 passs ");
+		
+		}
+		
+		
+	}
+	
+	
+	
 }

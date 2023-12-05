@@ -63,7 +63,7 @@ public class CaAddAccountPage
 		driver.findElement(lastname).sendKeys("Emerson");
 		Allure.step("Entered lastname");
 		//emailid
-		driver.findElement(emaild).sendKeys("test319@ascensor.com");
+		driver.findElement(emaild).sendKeys("testing319@ascensor.com");
 		Allure.step("Entered emaild");
 		//password
 		driver.findElement(password).sendKeys("GREGORY12");
@@ -104,7 +104,7 @@ public class CaAddAccountPage
 		Allure.step("Entered lastname");
 
 		//emailid
-		driver.findElement(emaild).sendKeys("test301@ascensor.com");
+		driver.findElement(emaild).sendKeys("test302@ascensor.com");
 		Allure.step("Entered existing emailid");
 
 		//password
@@ -135,7 +135,7 @@ public class CaAddAccountPage
 		driver.findElement(lastname).sendKeys(",ugfse09=s*^%$#@45u8674");
 		Allure.step("Entered invalid lastname");
 		//emailid
-		driver.findElement(emaild).sendKeys("gg)(*^549e0=6(*^%456(^%$#");
+		driver.findElement(emaild).sendKeys("gg)(*^549e77=6(*^%456(^%$#");
 		Allure.step("Entered invalid emailid");
 		//password
 		driver.findElement(password).sendKeys("HFDE3oSuitdr^%$@456&^%$#");
@@ -177,7 +177,7 @@ public class CaAddAccountPage
 		Allure.step("Clicked on profile icon");
 		Thread.sleep(3000);
 		driver.findElement(createAcc).click();
-		driver.findElement(emaild).sendKeys("test309@ascensor.com");
+		driver.findElement(emaild).sendKeys("test700@ascensor.com");
 		Allure.step("Entered emailid");
 		//password
 		driver.findElement(password).sendKeys("Herdyui");

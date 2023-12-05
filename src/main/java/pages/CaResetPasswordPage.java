@@ -47,7 +47,7 @@ public class CaResetPasswordPage {
 		driver.findElement(passwordresetlink).click(); 
 		Allure.step("Clicked on password reset link"); 
 		//email field    
-		driver.findElement(emaiild).sendKeys("test302@ascensor.com"); 
+		driver.findElement(emaiild).sendKeys("test303@ascensor.com"); 
 		Allure.step("Entered Emailid to receive an email to reset your password"); 
 		//submit button 
 		driver.findElement(submit).click(); 
@@ -74,7 +74,7 @@ public class CaResetPasswordPage {
 	{ 
 
 	//email field       
-	driver.findElement(emaiild).sendKeys("ytui55Rd5YF@ascensor.com"); 
+	driver.findElement(emaiild).sendKeys("ytui5ffd5YF@ascensor.com"); 
 	Allure.step("Entered Emailid to receive an email to reset your password"); 
 	//submit button 
 	Thread.sleep(2000);
